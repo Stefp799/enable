@@ -4,16 +4,18 @@ const Header = () => {
       <div className="mx-auto px-6 py-4" style={{maxWidth: '1260px'}}>
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <img
-              src="/images/Enable-Logo-v2.svg"
-              alt="Enable Solutions"
-              className="w-auto"
-              style={{height: '38px'}}
-            />
+            <a href="/">
+              <img
+                src="/images/Enable-Logo-v2.svg"
+                alt="Enable Solutions"
+                className="w-auto"
+                style={{height: '38px'}}
+              />
+            </a>
           </div>
 
           <nav className="hidden md:flex items-center space-x-8" style={{marginLeft: '150px', fontFamily: 'Montserrat, sans-serif', fontSize: '20px'}}>
-            <a href="#services" className="text-gray-700 hover:text-enable-blue transition-colors">
+            <a href="/services" className="text-gray-700 hover:text-enable-blue transition-colors">
               Services
             </a>
             <a href="#packages" className="text-gray-700 hover:text-enable-blue transition-colors">
