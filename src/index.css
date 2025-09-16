@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: 'Outfit', sans-serif;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@layer components {
+  .enable-gradient {
+    background: linear-gradient(135deg, #09f781 0%, #01628F 100%);
+  }
+
+  .enable-text-gradient {
+    background: linear-gradient(135deg, #09f781 0%, #01628F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
