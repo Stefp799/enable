@@ -1,6 +1,50 @@
 // Enable.llc Page Data Objects
 // Following the object-driven approach from DR Vacations documentation
 
+// Interactive Accordion Data - 5 Enable Services
+export const enableServicesAccordion = [
+  {
+    id: "consulting",
+    title: "Zoho Consulting",
+    subtitle: "Strategic Planning & Roadmaps",
+    description: "Not sure where to start? Our consulting sessions map your sales, service, and finance workflows against Zoho's ecosystem. You'll get a clear plan for what to implement, what to ignore, and how to phase your rollout.",
+    color: "#1e40af", // Blue
+    backgroundImage: "/images/consulting-bg.jpg"
+  },
+  {
+    id: "implementation",
+    title: "Zoho Implementation",
+    subtitle: "Full Setup & Configuration",
+    description: "We don't just 'set up' Zoho — we implement it with your real business in mind. From CRM to automation, we configure the tools, migrate your data, and train your team so adoption sticks.",
+    color: "#059669", // Green
+    backgroundImage: "/images/implementation-bg.jpg"
+  },
+  {
+    id: "integration",
+    title: "CRM & ERP Integration",
+    subtitle: "Seamless Data Flow",
+    description: "Your CRM shouldn't live in a silo. We connect Zoho to finance, operations, and third-party systems so data flows seamlessly. No more double entry, no more broken reports.",
+    color: "#dc2626", // Red
+    backgroundImage: "/images/integration-bg.jpg"
+  },
+  {
+    id: "apps",
+    title: "Zoho Apps Focus",
+    subtitle: "The Right Tools Only",
+    description: "Zoho offers dozens of apps — but you don't need them all. We focus on the handful that deliver results: CRM, Creator, Bigin, Desk, Finance, and Analytics. Everything you need, nothing you don't.",
+    color: "#7c3aed", // Purple
+    backgroundImage: "/images/apps-bg.jpg"
+  },
+  {
+    id: "packages",
+    title: "Support Packages",
+    subtitle: "Ongoing Partnership",
+    description: "Want a simple way to engage us? Our subscription packages give you predictable pricing and ongoing support. Choose Starter, Growth, or Enterprise based on your needs — each includes implementation, training, and updates.",
+    color: "#ea580c", // Orange
+    backgroundImage: "/images/packages-bg.jpg"
+  }
+];
+
 export const pageTemplates = {
   // Hero + Article Page Template
   heroArticlePage: {

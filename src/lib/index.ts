@@ -16,6 +16,7 @@ export type {
 export { default as Hero } from './components/Hero';
 export { default as Article } from './components/Article';
 export { default as PageBuilder } from './components/PageBuilder';
+export { default as InteractiveAccordion } from './components/InteractiveAccordion';
 
 // Utility functions
 export const createPageData = (
