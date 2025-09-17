@@ -12,6 +12,8 @@ export default {
       },
       fontFamily: {
         'outfit': ['Outfit', 'sans-serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
+        'montserrat-condensed': ['"Montserrat Condensed"', 'sans-serif'],
       },
     },
   },

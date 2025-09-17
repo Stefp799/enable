@@ -14,7 +14,7 @@ const Header = () => {
             </a>
           </div>
 
-          <nav className="hidden md:flex items-center space-x-8" style={{marginLeft: '150px', fontFamily: 'Montserrat, sans-serif', fontSize: '20px'}}>
+          <nav className="hidden md:flex items-center space-x-8" style={{marginLeft: '150px', fontFamily: 'Montserrat, sans-serif', fontSize: '16px'}}>
             <a href="/services" className="text-gray-700 hover:text-enable-blue transition-colors">
               Services
             </a>
@@ -32,9 +32,15 @@ const Header = () => {
             </a>
           </nav>
 
-          <button className="enable-gradient text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity">
-            Schedule A Meeting
-          </button>
+          <div className="flex items-center gap-4">
+            <a
+              href="tel:+15555551234"
+              className="enable-gradient inline-flex items-center text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+              aria-label="Call (555) 555-1234"
+            >
+              Call (555) 555-1234
+            </a>
+          </div>
         </div>
       </div>
     </header>

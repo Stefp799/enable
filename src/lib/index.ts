@@ -17,6 +17,8 @@ export { default as Hero } from './components/Hero';
 export { default as Article } from './components/Article';
 export { default as PageBuilder } from './components/PageBuilder';
 export { default as InteractiveAccordion } from './components/InteractiveAccordion';
+export { default as MarketingBlock, MarketingBlock1Style, MarketingBlock2Style } from './components/MarketingBlock';
+export { default as FullBleedDivider } from './components/FullBleedDivider';
 
 // Utility functions
 export const createPageData = (

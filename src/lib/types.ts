@@ -44,3 +44,32 @@ export interface AboutPageData extends PageData {
 export interface ContactPageData extends PageData {
   type: 'contact';
 }
+
+// Reusable Marketing Block (data-agnostic)
+export interface MarketingBlockStyle {
+  sectionClass?: string;
+  containerClass?: string;
+  gridClass?: string;
+  imageClass?: string;
+  textWrapClass?: string;
+  topLineClass?: string;
+  headingClass?: string;
+  bodyClass?: string;
+  emphasizeLineClass?: string;
+  emphasizeLine2Class?: string;
+  ctaWrapClass?: string;
+  ctaClass?: string;
+}
+
+export interface MarketingBlockContent {
+  id?: string;
+  imageSrc: string;
+  imageAlt?: string;
+  topLine: string;
+  heading: string;
+  body: string;
+  line1: string; // e.g., We simplify every step...
+  line2: string; // e.g., A Perfect Fit... - Guaranteed
+  ctaText: string;
+  ctaHref: string;
+}
