@@ -1,16 +1,20 @@
 import type { MarketingBlockStyle, MarketingBlockContent } from "../types";
+import type { ReactNode } from "react";
 
 type Props = {
   style?: MarketingBlockStyle;
   content: MarketingBlockContent;
   imagePosition?: 'left' | 'right';
+  children?: ReactNode;
 };
 
 const defaultStyle: MarketingBlockStyle = {
   sectionClass: "py-16 bg-white",
   containerClass: "mx-auto px-6",
   gridClass: "grid md:grid-cols-2 gap-10 items-center",
+  imageWrapClass: "",
   imageClass: "w-full rounded-2xl shadow object-cover",
+  overlayImageClass: "",
   textWrapClass: "md:mr-[50px] text-left",
   topLineClass:
     "font-montserrat-condensed text-green-600 text-[18px] leading-tight font-light mb-3",
@@ -30,20 +34,22 @@ export const MarketingBlock1Style: MarketingBlockStyle = { ...defaultStyle };
 
 export const MarketingBlock2Style: MarketingBlockStyle = {
   ...defaultStyle,
-  sectionClass: "py-16 bg-black",
-  imageClass: "w-full rounded-2xl shadow object-cover transform scale-y-[1.1]",
+  sectionClass: "py-16 bg-white",
+  imageWrapClass: "relative w-full max-w-[550px] mx-auto -mt-[40px] overflow-hidden rounded-2xl shadow border-black border-[20px] box-border",
+  imageClass: "block w-[550px] max-w-none object-cover transform scale-y-[1.1] -translate-y-[20px]",
+  overlayImageClass: "",
   topLineClass:
-    "font-montserrat-condensed text-green-400 text-[18px] leading-tight font-light mb-3",
+    "font-montserrat-condensed text-black text-[18px] leading-tight font-light mb-3",
   headingClass:
-    "font-montserrat-condensed text-3xl sm:text-4xl font-normal leading-tight text-white mb-6",
-  bodyClass: "font-montserrat-condensed text-white/90 mb-4",
+    "font-montserrat-condensed text-3xl sm:text-4xl font-normal leading-tight text-black mb-6",
+  bodyClass: "font-montserrat-condensed text-black mb-4",
   emphasizeLineClass:
-    "text-white text-[18px] leading-tight font-semibold mb-4",
+    "text-black text-[18px] leading-tight font-semibold mb-4",
   emphasizeLine2Class:
-    "text-white text-[18px] leading-tight -mt-2.5 mb-6",
+    "text-black text-[18px] leading-tight -mt-2.5 mb-6",
 };
 
-export default function MarketingBlock({ style, content, imagePosition = 'left' }: Props) {
+export default function MarketingBlock({ style, content, imagePosition = 'left', children }: Props) {
   const s = { ...defaultStyle, ...(style || {}) } as Required<MarketingBlockStyle>;
   const id = content.id || "";
 
@@ -53,8 +59,12 @@ export default function MarketingBlock({ style, content, imagePosition = 'left' 
         <div className={s.gridClass}>
           {imagePosition === 'left' ? (
             <>
-              <div>
-                <img src={content.imageSrc} alt={content.imageAlt || ""} className={s.imageClass} />
+              <div className={s.imageWrapClass}>
+                {s.overlayImageClass ? (
+                  <img src={content.imageSrc} alt={content.imageAlt || ""} className={s.overlayImageClass} />
+                ) : (
+                  <img src={content.imageSrc} alt={content.imageAlt || ""} className={s.imageClass} />
+                )}
               </div>
               <div className={s.textWrapClass}>
                 <p className={s.topLineClass}>{content.topLine}</p>
@@ -64,6 +74,7 @@ export default function MarketingBlock({ style, content, imagePosition = 'left' 
                 <p className={s.emphasizeLine2Class}>
                   <span className="font-semibold">{content.line2}</span>
                 </p>
+                {children}
                 <div className={s.ctaWrapClass}>
                   <a href={content.ctaHref} className={s.ctaClass}>
                     {content.ctaText}
@@ -81,14 +92,19 @@ export default function MarketingBlock({ style, content, imagePosition = 'left' 
                 <p className={s.emphasizeLine2Class}>
                   <span className="font-semibold">{content.line2}</span>
                 </p>
+                {children}
                 <div className={s.ctaWrapClass}>
                   <a href={content.ctaHref} className={s.ctaClass}>
                     {content.ctaText}
                   </a>
                 </div>
               </div>
-              <div>
-                <img src={content.imageSrc} alt={content.imageAlt || ""} className={s.imageClass} />
+              <div className={s.imageWrapClass}>
+                {s.overlayImageClass ? (
+                  <img src={content.imageSrc} alt={content.imageAlt || ""} className={s.overlayImageClass} />
+                ) : (
+                  <img src={content.imageSrc} alt={content.imageAlt || ""} className={s.imageClass} />
+                )}
               </div>
             </>
           )}

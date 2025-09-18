@@ -50,7 +50,9 @@ export interface MarketingBlockStyle {
   sectionClass?: string;
   containerClass?: string;
   gridClass?: string;
+  imageWrapClass?: string;
   imageClass?: string;
+  overlayImageClass?: string;
   textWrapClass?: string;
   topLineClass?: string;
   headingClass?: string;
