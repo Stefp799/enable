@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
-      <div className="mx-auto px-6 py-4" style={{maxWidth: '1260px'}}>
+      <div className="mx-auto px-6 py-4" style={{maxWidth: '1140px'}}>
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <a href="/">

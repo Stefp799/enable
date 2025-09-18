@@ -55,7 +55,7 @@ export default function MarketingBlock({ style, content, imagePosition = 'left',
 
   return (
     <section id={id} className={s.sectionClass}>
-      <div className={s.containerClass} style={{ maxWidth: "1260px" }}>
+      <div className={s.containerClass} style={{ maxWidth: "1140px" }}>
         <div className={s.gridClass}>
           {imagePosition === 'left' ? (
             <>

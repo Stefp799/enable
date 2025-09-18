@@ -29,7 +29,7 @@ export default function Home() {
         }}
       >
         <div className="absolute inset-0 bg-black/30" />
-        <div className="relative mx-auto px-6 pt-24 pb-28 text-white" style={{ maxWidth: "1260px" }}>
+        <div className="relative mx-auto px-6 pt-24 pb-28 text-white" style={{ maxWidth: "1140px" }}>
           <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
               Zoho Consulting Partner & CRM-AI Integration Experts
@@ -90,13 +90,13 @@ export default function Home() {
       <FullBleedDivider
         id="projects-divider"
         bgClass="bg-white"
-        eyebrow="Our weapons of choice."
+        eyebrow="Our weapons of choice"
         heading="Expert Coding For Every Aspect of Your Business"
       />
 
       {/* Gallery: 4 cards x 2 rows (placeholders using two images) */}
       <section id="gallery" className="py-12 bg-white -mt-[100px]">
-        <div className="mx-auto px-6" style={{ maxWidth: '1260px' }}>
+        <div className="mx-auto px-6" style={{ maxWidth: '1140px' }}>
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {zohoGallery.map((item, i) => (
               <div key={i} className="relative aspect-[4/3] overflow-hidden rounded-xl border border-black shadow-md hover:shadow-lg transition-shadow">
@@ -118,7 +118,7 @@ export default function Home() {
       </div>
       {/* Why Choose Us */}
       <section id="why-us" className="py-16">
-        <div className="mx-auto px-6" style={{ maxWidth: "1260px" }}>
+        <div className="mx-auto px-6" style={{ maxWidth: "1140px" }}>
           <MarketingBlock
             style={{
               ...MarketingBlock1Style,
@@ -177,7 +177,7 @@ export default function Home() {
       </div>
       {/* How It Works - Three Column Layout */}
       <section id="how-it-works-2" className="py-16">
-        <div className="mx-auto px-6 -mt-[50px]" style={{ maxWidth: "1260px" }}>
+        <div className="mx-auto px-6 -mt-[50px]" style={{ maxWidth: "1140px" }}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Step 1 */}
             <div className="text-center">
@@ -242,7 +242,7 @@ export default function Home() {
       </div>
       {/* Testimonials - Three Column Layout */}
       <section id="how-it-works-3" className="py-16">
-        <div className="mx-auto px-6 -mt-[50px]" style={{ maxWidth: "1260px" }}>
+        <div className="mx-auto px-6 -mt-[50px]" style={{ maxWidth: "1140px" }}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Testimonial 1 */}
             <div className="text-center">
@@ -292,7 +292,7 @@ export default function Home() {
       </div>
       {/* Excellence You Can Trust */}
       <section id="why-us-2" className="py-16">
-        <div className="mx-auto px-6" style={{ maxWidth: "1260px" }}>
+        <div className="mx-auto px-6" style={{ maxWidth: "1140px" }}>
           <MarketingBlock
             style={{
               ...MarketingBlock2Style,
@@ -343,7 +343,7 @@ export default function Home() {
 
       {/* FAQ */}
       <section id="faq" className="py-16 bg-gray-50">
-        <div className="mx-auto px-6" style={{ maxWidth: "1260px" }}>
+        <div className="mx-auto px-6" style={{ maxWidth: "1140px" }}>
           <h2 className="text-3xl font-bold text-gray-900 mb-6">FAQ</h2>
           <div className="space-y-3">
             <details className="rounded-lg border border-gray-200 bg-white p-4">
