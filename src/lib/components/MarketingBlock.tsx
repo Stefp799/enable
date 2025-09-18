@@ -35,8 +35,8 @@ export const MarketingBlock1Style: MarketingBlockStyle = { ...defaultStyle };
 export const MarketingBlock2Style: MarketingBlockStyle = {
   ...defaultStyle,
   sectionClass: "py-16 bg-white",
-  imageWrapClass: "relative w-full max-w-[550px] mx-auto -mt-[40px] overflow-hidden rounded-2xl shadow border-black border-[20px] box-border",
-  imageClass: "block w-[550px] max-w-none object-cover transform scale-y-[1.1] -translate-y-[20px]",
+  imageWrapClass: "",
+  imageClass: "w-full rounded-2xl shadow object-cover",
   overlayImageClass: "",
   topLineClass:
     "font-montserrat-condensed text-black text-[18px] leading-tight font-light mb-3",
