@@ -63,6 +63,8 @@ export default function Home() {
         }}
       />
 
+      <div className="w-full h-[10px] bg-blue-900" role="separator" aria-hidden="true" />
+
       <MarketingBlock
         style={MarketingBlock2Style}
         imagePosition="right"
@@ -84,6 +86,7 @@ export default function Home() {
         }}
       />
 
+      <div className="w-full h-[10px] bg-blue-900" role="separator" aria-hidden="true" />
       <FullBleedDivider
         id="projects-divider"
         bgClass="bg-white"
@@ -104,83 +107,237 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="w-full h-[10px] bg-blue-900" role="separator" aria-hidden="true" />
+      <div className="-mt-1">
+        <FullBleedDivider
+          eyebrow="Why Choose Us"
+          heading="Get the Inside Scoop on Our unique Benefits!"
+          bgClass="bg-white"
+          paddingClass="pt-12 pb-6"
+        />
+      </div>
       {/* Why Choose Us */}
       <section id="why-us" className="py-16">
         <div className="mx-auto px-6" style={{ maxWidth: "1260px" }}>
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Choose Us</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Block number={1} title="Certified Zoho Expertise">
-              Specialists across CRM, Books, Projects, Flow, Creator, and more.
-            </Block>
-            <Block number={2} title="Rapid Implementation">
-              Launch in weeks, not months—sprints designed for measurable outcomes.
-            </Block>
-            <Block number={3} title="Automation-First">
-              Reduce manual work with scalable workflows, APIs, and integrations.
-            </Block>
-            <Block number={4} title="Transparent Pricing">
-              Clear scopes and fixed options—no surprises, just progress.
-            </Block>
-          </div>
-        </div>
-      </section>
-
-      {/* Solutions Grid (Granite-style feature tiles) */}
-      <section id="solutions" className="py-16 bg-gray-50">
-        <div className="mx-auto px-6" style={{ maxWidth: "1260px" }}>
-          <h2 className="text-3xl font-bold text-gray-900 mb-10">Zoho Solutions</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Block title="CRM Implementation">Pipelines, automations, blueprints, and role-based access.</Block>
-            <Block title="Books & Billing">Invoices, subscriptions, and accounting integrations.</Block>
-            <Block title="Creator Apps">Custom data models and workflows tailored to your ops.</Block>
-            <Block title="Integrations & Flow">APIs, Flow, and webhooks to connect your stack.</Block>
-            <Block title="Analytics & Reporting">Dashboards, KPIs, and decision-ready analytics.</Block>
-            <Block title="Enablement & Support">Training, documentation, and continuous improvement.</Block>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Process */}
-      <section id="process" className="py-16 bg-gray-50">
-        <div className="mx-auto px-6" style={{ maxWidth: "1260px" }}>
-          <h2 className="text-3xl font-bold text-gray-900 mb-10">Our Process</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="rounded-xl border border-gray-200 p-6 bg-white">
-              <div className="text-4xl mb-3">🧭</div>
-              <h3 className="text-xl font-semibold mb-2">1) Discover</h3>
-              <p className="text-gray-600">Map goals, systems, and constraints. Define a sprint plan and success metrics.</p>
-            </div>
-            <div className="rounded-xl border border-gray-200 p-6 bg-white">
-              <div className="text-4xl mb-3">🛠️</div>
-              <h3 className="text-xl font-semibold mb-2">2) Build</h3>
-              <p className="text-gray-600">Configure apps, data models, and automations. Integrate with your stack.</p>
-            </div>
-            <div className="rounded-xl border border-gray-200 p-6 bg-white">
-              <div className="text-4xl mb-3">🚀</div>
-              <h3 className="text-xl font-semibold mb-2">3) Launch & Optimize</h3>
-              <p className="text-gray-600">Train teams, monitor KPIs, and iterate for continuous improvement.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Proof */}
-      <section id="proof" className="py-16">
-        <div className="mx-auto px-6" style={{ maxWidth: "1260px" }}>
-          <h2 className="text-3xl font-bold text-gray-900 mb-10">Proof</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
-            {["Logo A", "Logo B", "Logo C", "Logo D"].map((logo) => (
-              <div key={logo} className="h-14 rounded-md border border-gray-200 bg-gray-50 flex items-center justify-center text-gray-500">
-                {logo}
+          <MarketingBlock
+            style={{
+              ...MarketingBlock1Style,
+              sectionClass: `${MarketingBlock1Style.sectionClass} -mt-[150px]`,
+              imageWrapClass: `${MarketingBlock1Style.imageWrapClass ?? ""} mt-4`,
+              ctaWrapClass: `${MarketingBlock1Style.ctaWrapClass ?? "flex justify-center"} mt-10`
+            }}
+            content={{
+              id: "why-intro",
+              imageSrc: "/images/Challenges-in-Zoho-to-Salesforce-Migration.png",
+              imageAlt: "Consulting conversation",
+              topLine: "Reasons our clients trust Enable",
+              heading: "",
+              body: "",
+              line1: "",
+              line2: "",
+              ctaText: "Set Up a Visit",
+              ctaHref: "#contact",
+            }}
+          >
+            <div className="mt-14 space-y-5">
+              <div className="flex items-start gap-4">
+                <img src="/images/lens.jpg" alt="Lens" className="h-10 w-10 object-contain rounded" />
+                <div>
+                  <div className="font-montserrat-condensed text-xl text-black">Transparent Choices</div>
+                  <p className="text-black/80">Clear options, demos, and estimates so you can decide with confidence.</p>
+                </div>
               </div>
-            ))}
+              <div className="flex items-start gap-4">
+                <img src="/images/warranty.jpg" alt="Warranty" className="h-10 w-10 object-contain rounded" />
+                <div>
+                  <div className="font-montserrat-condensed text-xl text-black">Endless Expertise</div>
+                  <p className="text-black/80">Seasoned Zoho builders across CRM, Books, Projects, Flow, Creator, and more.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <img src="/images/square.jpg" alt="Square" className="h-10 w-10 object-contain rounded" />
+                <div>
+                  <div className="font-montserrat-condensed text-xl text-black">Precision Perfection</div>
+                  <p className="text-black/80">Digital design, disciplined builds, and QA for a precise finish.</p>
+                </div>
+              </div>
+            </div>
+          </MarketingBlock>
+        </div>
+      </section>
+
+      <div className="w-full h-[10px] bg-blue-900" role="separator" aria-hidden="true" />
+      <div className="-mt-1">
+        <FullBleedDivider
+          eyebrow="How It Works"
+          heading="Working with Enable.llc is as easy as 1, 2, 3"
+          bgClass="bg-white"
+          paddingClass="pt-12 pb-6"
+        />
+      </div>
+      {/* How It Works - Three Column Layout */}
+      <section id="how-it-works-2" className="py-16">
+        <div className="mx-auto px-6 -mt-[50px]" style={{ maxWidth: "1260px" }}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Step 1 */}
+            <div className="text-center">
+              <div className="mb-6">
+                <img
+                  src="/images/image-5.jpeg"
+                  alt="Step 1"
+                  className="w-full h-[576px] object-cover rounded-lg shadow-md mx-auto"
+                />
+              </div>
+              <h3 className="text-xl font-montserrat-condensed font-semibold text-black mb-3">1. Initial Phone Call</h3>
+              <p className="text-black/80">In our initial phone call we listen to your concerns and vision. We analyze your current processes and identify opportunities for optimization with Zoho solutions.</p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="text-center">
+              <div className="mb-6">
+                <img
+                  src="/images/checklist.png"
+                  alt="Step 2"
+                  className="w-full h-[576px] object-cover rounded-lg shadow-md mx-auto"
+                />
+              </div>
+              <h3 className="text-xl font-montserrat-condensed font-semibold text-black mb-3">2. Design</h3>
+              <p className="text-black/80">The design process is the heart of the matter. Our experts configure and customize your Zoho environment to match your business requirements.</p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="text-center">
+              <div className="mb-6">
+                <img
+                  src="/images/CRM-Agency.webp"
+                  alt="Step 3"
+                  className="w-full h-[576px] object-cover rounded-lg shadow-md mx-auto"
+                />
+              </div>
+              <h3 className="text-xl font-montserrat-condensed font-semibold text-black mb-3">3. Deliver</h3>
+              <p className="text-black/80">We not only deliver the solution, but we provide comprehensive training and ongoing support to ensure your team maximizes their productivity.</p>
+            </div>
           </div>
-          <div className="rounded-xl border border-gray-200 p-6 bg-white">
-            <p className="text-gray-700 italic">
-              “Enable helped us consolidate our sales and delivery across Zoho CRM, Projects, and Books. Our cycle times dropped noticeably in the first month.”
-            </p>
-            <div className="mt-3 text-sm text-gray-500">— Operations Lead, SaaS Co.</div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-12">
+            <a
+              href="#contact"
+              className="inline-block bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+            >
+              Give us a call and see how easy it can be
+            </a>
           </div>
+        </div>
+      </section>
+
+      <div className="w-full h-[10px] bg-blue-900" role="separator" aria-hidden="true" />
+      <div className="-mt-1">
+        <FullBleedDivider
+          eyebrow="Testimonials"
+          heading="Transformations That Speak Volumes"
+          bgClass="bg-white"
+          paddingClass="pt-12 pb-6"
+        />
+      </div>
+      {/* Testimonials - Three Column Layout */}
+      <section id="how-it-works-3" className="py-16">
+        <div className="mx-auto px-6 -mt-[50px]" style={{ maxWidth: "1260px" }}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Testimonial 1 */}
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                <span className="text-yellow-400 text-2xl">★★★★★</span>
+              </div>
+              <p className="text-black/80">Stop searching for a fabricator. Granite Guy Inc. is hands down the best in metro west. Geovanna and team were amazing. The shop carries beautiful slabs, they use high tech computer-driven CNC milling to cut your slab to perfection. Before they cut the slab, they use software to plan the cuts to follow the movement of the stone, and enhance the natural feel when installed. This team delivers counters and workmanship of the highest quality. Choose Granite Guy Inc. for your kitchen and you will truly be happy!</p>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                <span className="text-yellow-400 text-2xl">★★★★★</span>
+              </div>
+              <p className="text-black/80">Stop searching for a fabricator. Granite Guy Inc. is hands down the best in metro west. Geovanna and team were amazing. The shop carries beautiful slabs, they use high tech computer-driven CNC milling to cut your slab to perfection. Before they cut the slab, they use software to plan the cuts to follow the movement of the stone, and enhance the natural feel when installed. This team delivers counters and workmanship of the highest quality. Choose Granite Guy Inc. for your kitchen and you will truly be happy!</p>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                <span className="text-yellow-400 text-2xl">★★★★★</span>
+              </div>
+              <p className="text-black/80">Stop searching for a fabricator. Granite Guy Inc. is hands down the best in metro west. Geovanna and team were amazing. The shop carries beautiful slabs, they use high tech computer-driven CNC milling to cut your slab to perfection. Before they cut the slab, they use software to plan the cuts to follow the movement of the stone, and enhance the natural feel when installed. This team delivers counters and workmanship of the highest quality. Choose Granite Guy Inc. for your kitchen and you will truly be happy!</p>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-32">
+            <a
+              href="#contact"
+              className="inline-block bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+            >
+              Give us a call and see how easy it can be
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div className="w-full h-[10px] bg-blue-900" role="separator" aria-hidden="true" />
+      <div className="-mt-1">
+        <FullBleedDivider
+          eyebrow="Excellence You Can Trust"
+          heading="What Sets Us Apart"
+          bgClass="bg-white"
+          paddingClass="pt-12 pb-6"
+        />
+      </div>
+      {/* Excellence You Can Trust */}
+      <section id="why-us-2" className="py-16">
+        <div className="mx-auto px-6" style={{ maxWidth: "1260px" }}>
+          <MarketingBlock
+            style={{
+              ...MarketingBlock2Style,
+              sectionClass: `${MarketingBlock2Style.sectionClass} -mt-[150px]`,
+              imageWrapClass: `${MarketingBlock2Style.imageWrapClass ?? ""} mt-4`,
+              ctaWrapClass: `${MarketingBlock2Style.ctaWrapClass ?? "flex justify-center"} mt-10`
+            }}
+            imagePosition="right"
+            content={{
+              id: "why-intro-2",
+              imageSrc: "/images/Challenges-in-Zoho-to-Salesforce-Migration.png",
+              imageAlt: "Consulting conversation",
+              topLine: "Reasons our clients trust Enable",
+              heading: "",
+              body: "",
+              line1: "",
+              line2: "",
+              ctaText: "Set Up a Visit",
+              ctaHref: "#contact",
+            }}
+          >
+            <div className="mt-14 space-y-5">
+              <div className="flex items-start gap-4">
+                <img src="/images/lens.jpg" alt="Lens" className="h-10 w-10 object-contain rounded" />
+                <div>
+                  <div className="font-montserrat-condensed text-xl text-black">Transparent Choices</div>
+                  <p className="text-black/80">Clear options, demos, and estimates so you can decide with confidence.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <img src="/images/warranty.jpg" alt="Warranty" className="h-10 w-10 object-contain rounded" />
+                <div>
+                  <div className="font-montserrat-condensed text-xl text-black">Endless Expertise</div>
+                  <p className="text-black/80">Seasoned Zoho builders across CRM, Books, Projects, Flow, Creator, and more.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <img src="/images/square.jpg" alt="Square" className="h-10 w-10 object-contain rounded" />
+                <div>
+                  <div className="font-montserrat-condensed text-xl text-black">Precision Perfection</div>
+                  <p className="text-black/80">Digital design, disciplined builds, and QA for a precise finish.</p>
+                </div>
+              </div>
+            </div>
+          </MarketingBlock>
         </div>
       </section>
 
@@ -217,3 +374,8 @@ export default function Home() {
     </div>
   );
 }
+
+
+
+
+
