@@ -1,0 +1,6 @@
+# Project configuration (TOML)
+title = "Enable"
+
+# Agent preference flags (only effective if your tool reads them)
+mode = "dangerous"          # requested: "dangerous mode"
+approvals = "never"         # hint: don't ask for approvals

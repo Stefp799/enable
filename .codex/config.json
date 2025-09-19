@@ -1,0 +1,5 @@
+{
+  "approvalPolicy": "never",
+  "filesystemSandbox": "danger-full-access",
+  "networkAccess": "enabled"
+}

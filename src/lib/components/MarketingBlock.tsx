@@ -30,13 +30,16 @@ const defaultStyle: MarketingBlockStyle = {
     "flex items-center justify-center rounded-lg px-6 py-3 text-white font-semibold bg-green-600 hover:bg-green-700",
 };
 
-export const MarketingBlock1Style: MarketingBlockStyle = { ...defaultStyle };
+export const MarketingBlock1Style: MarketingBlockStyle = {
+  ...defaultStyle,
+  imageClass: "w-[90%] rounded-2xl shadow object-cover mx-auto transform -translate-x-5"
+};
 
 export const MarketingBlock2Style: MarketingBlockStyle = {
   ...defaultStyle,
   sectionClass: "py-16 bg-white",
   imageWrapClass: "",
-  imageClass: "w-full rounded-2xl shadow object-cover",
+  imageClass: "w-full rounded-2xl shadow object-cover transform scale-x-90 scale-y-110",
   overlayImageClass: "",
   topLineClass:
     "font-montserrat-condensed text-black text-[18px] leading-tight font-light mb-3",

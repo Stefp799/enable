@@ -48,7 +48,7 @@ export default function Home() {
         style={MarketingBlock1Style}
         content={{
           id: "problem-clarity",
-          imageSrc: "/images/Challenges-in-Zoho-to-Salesforce-Migration.png",
+          imageSrc: "/images/zohoconfused.jpg",
           imageAlt: "Zoho Solutions placeholder",
           topLine:
             "We craft custom Zoho Solutions that add tremendous functionality to any aspect of your business.",
@@ -284,60 +284,47 @@ export default function Home() {
       <div className="w-full h-[10px] bg-blue-900" role="separator" aria-hidden="true" />
       <div className="-mt-1">
         <FullBleedDivider
-          eyebrow="Excellence You Can Trust"
-          heading="What Sets Us Apart"
+          eyebrow="What Sets Us Apart"
+          heading="Excellence You Can Trust"
           bgClass="bg-white"
           paddingClass="pt-12 pb-6"
         />
       </div>
       {/* Excellence You Can Trust */}
       <section id="why-us-2" className="py-16">
-        <div className="mx-auto px-6" style={{ maxWidth: "1140px" }}>
-          <MarketingBlock
-            style={{
-              ...MarketingBlock2Style,
-              sectionClass: `${MarketingBlock2Style.sectionClass} -mt-[150px]`,
-              imageWrapClass: `${MarketingBlock2Style.imageWrapClass ?? ""} mt-4`,
-              ctaWrapClass: `${MarketingBlock2Style.ctaWrapClass ?? "flex justify-center"} mt-10`
-            }}
-            imagePosition="right"
-            content={{
-              id: "why-intro-2",
-              imageSrc: "/images/Challenges-in-Zoho-to-Salesforce-Migration.png",
-              imageAlt: "Consulting conversation",
-              topLine: "Reasons our clients trust Enable",
-              heading: "",
-              body: "",
-              line1: "",
-              line2: "",
-              ctaText: "Set Up a Visit",
-              ctaHref: "#contact",
-            }}
-          >
-            <div className="mt-14 space-y-5">
-              <div className="flex items-start gap-4">
-                <img src="/images/lens.jpg" alt="Lens" className="h-10 w-10 object-contain rounded" />
-                <div>
-                  <div className="font-montserrat-condensed text-xl text-black">Transparent Choices</div>
-                  <p className="text-black/80">Clear options, demos, and estimates so you can decide with confidence.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <img src="/images/warranty.jpg" alt="Warranty" className="h-10 w-10 object-contain rounded" />
-                <div>
-                  <div className="font-montserrat-condensed text-xl text-black">Endless Expertise</div>
-                  <p className="text-black/80">Seasoned Zoho builders across CRM, Books, Projects, Flow, Creator, and more.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <img src="/images/square.jpg" alt="Square" className="h-10 w-10 object-contain rounded" />
-                <div>
-                  <div className="font-montserrat-condensed text-xl text-black">Precision Perfection</div>
-                  <p className="text-black/80">Digital design, disciplined builds, and QA for a precise finish.</p>
-                </div>
-              </div>
+        <div className="mx-auto px-6 -mt-[150px]" style={{ maxWidth: "1140px" }}>
+          <div className="w-full overflow-hidden rounded-2xl shadow-lg h-96">
+            <img
+              src="/images/whatsets.png"
+              alt="What Sets Us Apart"
+              className="w-full object-cover h-[400px]"
+              style={{objectPosition: '0 -120px'}}
+            />
+          </div>
+
+          {/* Four Text Blocks */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+            <div className="text-left">
+              <h3 className="font-montserrat-condensed text-xl font-light text-black mb-1">Complete Showroom</h3>
+              <p className="text-black/80">Learn about material options, their characteristics, and care tips.</p>
             </div>
-          </MarketingBlock>
+
+            <div className="text-left">
+              <img src="/images/timeicon.jpg" alt="Time Icon" className="w-8 h-8 mb-2 transform scale-x-125 scale-120" />
+              <h3 className="font-montserrat-condensed text-xl font-light text-black mb-1">Quick Turnaround</h3>
+              <p className="text-black/80">Swift, transparent and precise, we get your project completed without delay.</p>
+            </div>
+
+            <div className="text-left">
+              <h3 className="font-montserrat-condensed text-xl font-light text-black mb-1">Digital Layout</h3>
+              <p className="text-black/80">Double-check and adjust layouts before cutting, ensuring precision and no surprises.</p>
+            </div>
+
+            <div className="text-left">
+              <h3 className="font-montserrat-condensed text-xl font-light text-black mb-1">High-Tech Fabrication</h3>
+              <p className="text-black/80">Achieve flawless execution, even for complex shapes or custom projects, with our advanced fabrication technology.</p>
+            </div>
+          </div>
         </div>
       </section>
 

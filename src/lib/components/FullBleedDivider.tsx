@@ -24,7 +24,7 @@ export default function FullBleedDivider({ id, bgImage, bgClass = "bg-white", ey
     >
       {bgImage ? <div className="absolute inset-0 bg-black/70" /> : null}
       <div className={`relative mx-auto px-6 text-center ${paddingClass}`} style={{ maxWidth: "1200px" }}>
-        <div className={`${eyebrowColor} uppercase tracking-wide -mb-2 -mt-2.5`} style={{fontFamily: 'Lateef', fontWeight: 400, fontSize: '36px'}}>{eyebrow}</div>
+        <div className={`${eyebrowColor} uppercase tracking-wide -mb-2 -mt-2.5`} style={{fontFamily: 'Castoro', fontWeight: 400, fontSize: '28px'}}>{eyebrow}</div>
         <h2 className={`${headingColor} leading-tight mb-4`} style={{fontFamily: 'Montserrat', fontWeight: 400, fontSize: '36px'}}>
           {heading}
         </h2>
