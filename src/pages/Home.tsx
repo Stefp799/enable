@@ -303,26 +303,29 @@ export default function Home() {
           </div>
 
           {/* Four Text Blocks */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-12">
             <div className="text-left">
-              <h3 className="font-montserrat-condensed text-xl font-light text-black mb-1">Complete Showroom</h3>
-              <p className="text-black/80">Learn about material options, their characteristics, and care tips.</p>
+              <img src="/images/complete.jpg" alt="Complete Icon" className="w-8 h-8 mb-2 transform scale-150 scale-x-150" />
+              <h3 className="font-montserrat-condensed text-xl font-light text-black mb-1">Complete Process</h3>
+              <p className="text-black/80">We implement a complete process from first phone call to delivery, implementation, training, and adoption.</p>
             </div>
 
             <div className="text-left">
-              <img src="/images/timeicon.jpg" alt="Time Icon" className="w-8 h-8 mb-2 transform scale-x-125 scale-120" />
+              <img src="/images/timeicon.jpg" alt="Time Icon" className="w-8 h-8 mb-2 transform scale-150 scale-x-150" />
               <h3 className="font-montserrat-condensed text-xl font-light text-black mb-1">Quick Turnaround</h3>
               <p className="text-black/80">Swift, transparent and precise, we get your project completed without delay.</p>
             </div>
 
             <div className="text-left">
+              <img src="/images/digital1.jpg" alt="Digital Icon" className="w-8 h-8 mb-2 transform scale-150 scale-x-150" />
               <h3 className="font-montserrat-condensed text-xl font-light text-black mb-1">Digital Layout</h3>
-              <p className="text-black/80">Double-check and adjust layouts before cutting, ensuring precision and no surprises.</p>
+              <p className="text-black/80">We always double-check and adjust our digital layout before completion and delivery.</p>
             </div>
 
             <div className="text-left">
+              <img src="/images/digital.jpg" alt="Fabrication Icon" className="w-8 h-8 mb-2 transform scale-150 scale-x-150" />
               <h3 className="font-montserrat-condensed text-xl font-light text-black mb-1">High-Tech Fabrication</h3>
-              <p className="text-black/80">Achieve flawless execution, even for complex shapes or custom projects, with our advanced fabrication technology.</p>
+              <p className="text-black/80">That's how we achieve near flawless execution even for complex jobs or custom projects.</p>
             </div>
           </div>
         </div>
