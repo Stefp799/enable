@@ -1,13 +1,23 @@
 import { Routes, Route } from 'react-router-dom'
 import Services from './pages/Services'
 import Home from './pages/Home'
+import ZohoConsulting from './pages/ZohoConsulting'
+import ZohoDeveloper from './pages/ZohoDeveloper'
+import ZohoApps from './pages/ZohoApps'
+import EmilyFlynnAI from './components/EmilyFlynnAI'
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/services" element={<Services />} />
-    </Routes>
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/services/zoho-consulting" element={<ZohoConsulting />} />
+        <Route path="/services/zoho-developer" element={<ZohoDeveloper />} />
+        <Route path="/zoho-apps" element={<ZohoApps />} />
+      </Routes>
+      <EmilyFlynnAI />
+    </div>
   )
 }
 

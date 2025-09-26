@@ -68,12 +68,14 @@ const Header = () => {
             </div>
 
             <nav className="hidden md:flex items-center space-x-8" style={{marginLeft: '150px', fontFamily: 'Montserrat, sans-serif', fontSize: '16px'}}>
-              <button
-                onClick={handleServicesClick}
-                className="text-gray-700 hover:text-enable-blue transition-colors cursor-pointer"
-              >
-                Services
-              </button>
+              <div className="relative">
+                <button
+                  onClick={handleServicesClick}
+                  className="text-gray-700 hover:text-enable-blue transition-colors cursor-pointer"
+                >
+                  Services
+                </button>
+              </div>
               <a href="#packages" className="text-gray-700 hover:text-enable-blue transition-colors">
                 Packages
               </a>

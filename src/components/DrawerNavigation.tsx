@@ -9,11 +9,12 @@ interface DrawerNavigationProps {
 
 const DrawerNavigation = ({ isOpen, onClose, onMouseEnter, onMouseLeave }: DrawerNavigationProps) => {
   const menuItems = [
-    { title: 'CRM Solutions', href: '/services/crm' },
-    { title: 'Sales Automation', href: '/services/automation' },
-    { title: 'Custom Development', href: '/services/development' },
-    { title: 'Data Migration', href: '/services/migration' },
-    { title: 'Training & Support', href: '/services/training' },
+    { title: 'Zoho Consulting', href: '/services/zoho-consulting' },
+    { title: 'Zoho Developer', href: '/services/zoho-developer' },
+    { title: 'Zoho Apps', href: '/zoho-apps' },
+    { title: 'Mobile Apps', href: '/services/mobile-apps' },
+    { title: 'Web Development', href: '/services/web-development' },
+    { title: 'CRM/ERP Integration', href: '/services/crm-erp-integration' },
   ];
 
   return (
@@ -28,51 +29,47 @@ const DrawerNavigation = ({ isOpen, onClose, onMouseEnter, onMouseLeave }: Drawe
 
       {/* Drawer */}
       <div
-        className={`fixed left-0 w-[450px] shadow-2xl transform transition-transform duration-300 ease-in-out z-50 rounded-r-3xl ${
+        className={`fixed left-0 w-[450px] shadow-2xl transform transition-transform duration-300 ease-in-out z-50 rounded-r-3xl overflow-hidden ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
         style={{
-          background: 'linear-gradient(to right, #1e1b4b, #00E5F0 75%)',
           top: '20vh',
           height: '60vh',
           borderTopRightRadius: '24px',
-          borderBottomRightRadius: '24px'
+          borderBottomRightRadius: '24px',
+          backgroundColor: 'white'
         }}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       >
-        <div className="pl-8 pr-4 py-8">
-          {/* Header */}
-          <div className="mb-8">
-            <h2 className="text-black text-3xl mb-2" style={{color: '#000000', fontFamily: 'Montserrat, sans-serif', fontWeight: 600}}>Services</h2>
-            <div className="w-16 h-0.5" style={{backgroundColor: '#000000'}}></div>
-          </div>
+        {/* Green Header Band */}
+        <div className="bg-green-500 text-white p-6 text-right">
+          <a
+            href="/services"
+            className="font-bold text-2xl hover:opacity-80 transition-opacity"
+            style={{fontFamily: 'Montserrat, sans-serif'}}
+            onClick={onClose}
+          >
+            Services
+          </a>
+        </div>
+
+        <div className="px-8 pt-3 pb-8">
 
           {/* Menu Items */}
-          <nav className="space-y-2">
+          <nav className="space-y-0">
             {menuItems.map((item, index) => (
               <a
                 key={index}
                 href={item.href}
-                className="block py-3 px-2 text-black transition-colors duration-200 text-right"
-                style={{color: '#000000', fontFamily: 'Montserrat, sans-serif', fontWeight: 500}}
+                className="block py-2 px-4 text-gray-800 hover:text-white transition-all duration-200 rounded-lg hover:bg-green-500 text-right"
+                style={{fontFamily: 'Montserrat, sans-serif', fontWeight: 400}}
                 onClick={() => {
                   onMouseEnter(); // Reset timer on click
                   onClose();
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.color = '#FFFFFF';
-                  e.currentTarget.style.background = 'linear-gradient(to right, transparent 25%, #1e1b4b 25%)';
-                  e.currentTarget.style.borderRadius = '12px';
-                  e.currentTarget.style.backgroundClip = 'padding-box';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = '#000000';
-                  e.currentTarget.style.background = 'transparent';
-                  e.currentTarget.style.borderRadius = '0px';
-                }}
               >
-                <span className="text-lg font-medium">{item.title}</span>
+                <span className="text-xl">{item.title}</span>
               </a>
             ))}
           </nav>
