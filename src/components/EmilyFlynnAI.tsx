@@ -65,13 +65,7 @@ const EmilyFlynnAI = () => {
 
     // Billing/refund responses (check these first)
     if (lowerMessage.includes('refund') || lowerMessage.includes('money back') || lowerMessage.includes('cancel') || lowerMessage.includes('billing') || lowerMessage.includes('payment') || lowerMessage.includes('invoice') || lowerMessage.includes('charge')) {
-      const billingResponses = [
-        "I understand you have a billing concern. For refund requests, payment issues, or billing questions, I'll connect you with our billing department. Can you provide more details about your specific billing issue?",
-        "I can help with billing and refund requests. To process your request efficiently, could you tell me more about the specific charge or service you're inquiring about?",
-        "For billing matters including refunds, I'll make sure you get connected to the right person. What's the nature of your billing concern?",
-        "I see you have a billing question. Our billing team handles all refunds and payment issues. Can you describe what you need assistance with?"
-      ];
-      return billingResponses[Math.floor(Math.random() * billingResponses.length)];
+      return "Please contact service@enable.llc for all billing disputes and refund requests.";
     }
 
     // Business/services responses
@@ -119,7 +113,7 @@ const EmilyFlynnAI = () => {
         response = "I'm here to help with any questions or issues you have with our Zoho consulting services. What specific customer service matter can I assist you with today?";
         break;
       case 'Billing':
-        response = "I can help you with billing questions related to our Zoho consulting services. Are you looking for information about pricing, invoices, or payment options?";
+        response = "Please contact service@enable.llc for all billing disputes and refund requests.";
         break;
       case 'Request an Appointment':
         response = "I'd be happy to help you schedule a consultation with our Zoho experts. What type of Zoho services are you interested in discussing? This will help me connect you with the right specialist.";

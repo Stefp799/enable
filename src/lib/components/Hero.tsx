@@ -1,5 +1,6 @@
 import React from 'react';
 import { HeroData } from '../types';
+import { LAYOUT_CONSTANTS } from '../index';
 
 interface HeroProps {
   data: HeroData;
@@ -10,7 +11,7 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({
   data,
   showCTA = false,
-  className = "py-28 px-6 relative"
+  className = "relative"
 }) => {
   const { title, subtitle, description, ctaText, backgroundImage } = data;
 
@@ -18,6 +19,7 @@ const Hero: React.FC<HeroProps> = ({
     <section
       className={className}
       style={{
+        height: LAYOUT_CONSTANTS.HERO_HEIGHT,
         backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined,
         backgroundColor: backgroundImage ? undefined : 'rgba(173, 216, 230, 0.1)',
         backgroundSize: 'cover',
@@ -28,8 +30,8 @@ const Hero: React.FC<HeroProps> = ({
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
       )}
 
-      <div className="mx-auto relative z-10" style={{maxWidth: '1260px'}}>
-        <div className="text-center max-w-4xl mx-auto">
+      <div className={`mx-auto relative z-10 h-full flex items-center ${LAYOUT_CONSTANTS.HORIZONTAL_PADDING}`} style={{maxWidth: LAYOUT_CONSTANTS.PAGE_MAX_WIDTH}}>
+        <div className={`${LAYOUT_CONSTANTS.HERO_CONTENT_MAX_WIDTH} ${LAYOUT_CONSTANTS.HERO_TEXT_ALIGNMENT}`}>
           <h1 className={`text-4xl lg:text-5xl font-medium leading-tight mb-6 ${
             backgroundImage ? 'text-white' : 'text-gray-800'
           }`}>

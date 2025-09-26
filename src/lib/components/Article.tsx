@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArticleData, Section } from '../types';
+import { LAYOUT_CONSTANTS } from '../index';
 
 interface ArticleProps {
   data: ArticleData;
@@ -75,10 +76,8 @@ const Article: React.FC<ArticleProps> = ({
 
   return (
     <section className={className}>
-      <div className="mx-auto" style={{maxWidth: '1260px'}}>
-        <div className="max-w-4xl mx-auto">
-          {data.sections.map((section, index) => renderSection(section, index))}
-        </div>
+      <div className={`mx-auto ${LAYOUT_CONSTANTS.HORIZONTAL_PADDING}`} style={{maxWidth: LAYOUT_CONSTANTS.PAGE_MAX_WIDTH}}>
+        {data.sections.map((section, index) => renderSection(section, index))}
       </div>
     </section>
   );

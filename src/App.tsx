@@ -6,6 +6,7 @@ import ZohoDeveloper from './pages/ZohoDeveloper'
 import ZohoApps from './pages/ZohoApps'
 import ZohoOne from './pages/ZohoOne'
 import ZohoOneCompleteGuide from './pages/ZohoOneCompleteGuide'
+import ZohoCrmFreeTrial from './pages/ZohoCrmFreeTrial'
 import EmilyFlynnAI from './components/EmilyFlynnAI'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/zoho-apps" element={<ZohoApps />} />
         <Route path="/zoho-apps/zoho-one" element={<ZohoOne />} />
         <Route path="/zoho-apps/zoho-one-complete-guide" element={<ZohoOneCompleteGuide />} />
+        <Route path="/resources/zoho-crm-free-trial" element={<ZohoCrmFreeTrial />} />
       </Routes>
       <EmilyFlynnAI />
     </div>

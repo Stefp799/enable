@@ -57,12 +57,32 @@ export const createArticleSection = (
   author
 });
 
-// Default configurations
+// Default configurations - Consistent Layout System
+// All pages use: max-width: 1140px, px-6 padding, left-aligned content
 export const defaultHeroConfig = {
-  className: "py-28 px-6 relative",
-  showCTA: false
+  className: "relative",
+  showCTA: false,
+  // Hero uses: max-width: 1140px + px-6 + max-w-3xl content + text-left + 400px height
 };
 
 export const defaultArticleConfig = {
-  className: "py-16 px-6"
+  className: "py-16 px-6",
+  // Article uses: max-width: 1140px + px-6 + full-width content
+};
+
+// Layout System Constants
+export const LAYOUT_CONSTANTS = {
+  // Page container max-width (matches homepage)
+  PAGE_MAX_WIDTH: '1140px',
+
+  // Hero configuration
+  HERO_HEIGHT: '400px',
+  HERO_CONTENT_MAX_WIDTH: 'max-w-3xl', // Narrow for readability
+  HERO_TEXT_ALIGNMENT: 'text-left',
+
+  // Article configuration
+  ARTICLE_CONTENT_MAX_WIDTH: 'full-width', // Full page width
+
+  // Consistent padding
+  HORIZONTAL_PADDING: 'px-6', // 24px on each side
 };
