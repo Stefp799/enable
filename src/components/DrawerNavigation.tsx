@@ -11,11 +11,13 @@ const DrawerNavigation = ({ isOpen, onClose, onMouseEnter, onMouseLeave }: Drawe
   const menuItems = [
     { title: 'Zoho Consulting', href: '/services/zoho-consulting' },
     { title: 'Zoho Developer', href: '/services/zoho-developer' },
-    { title: 'Zoho Apps', href: '/zoho-apps' },
     { title: 'Mobile Apps', href: '/services/mobile-apps' },
     { title: 'Web Development', href: '/services/web-development' },
     { title: 'CRM/ERP Integration', href: '/services/crm-erp-integration' },
   ];
+
+  // Calculate dynamic height: header (96px) + padding (32px) + (items * 44px each)
+  const dynamicHeight = 96 + 32 + (menuItems.length * 44);
 
   return (
     <>
@@ -34,7 +36,7 @@ const DrawerNavigation = ({ isOpen, onClose, onMouseEnter, onMouseLeave }: Drawe
         }`}
         style={{
           top: '20vh',
-          height: '60vh',
+          height: `${dynamicHeight}px`,
           borderTopRightRadius: '24px',
           borderBottomRightRadius: '24px',
           backgroundColor: 'white'
@@ -43,10 +45,10 @@ const DrawerNavigation = ({ isOpen, onClose, onMouseEnter, onMouseLeave }: Drawe
         onMouseLeave={onMouseLeave}
       >
         {/* Green Header Band */}
-        <div className="bg-green-500 text-white p-6 text-right">
+        <div className="bg-green-500 text-white py-6 pr-6 text-right">
           <a
             href="/services"
-            className="font-bold text-2xl hover:opacity-80 transition-opacity"
+            className="font-medium text-2xl hover:opacity-80 transition-opacity"
             style={{fontFamily: 'Montserrat, sans-serif'}}
             onClick={onClose}
           >
@@ -54,7 +56,7 @@ const DrawerNavigation = ({ isOpen, onClose, onMouseEnter, onMouseLeave }: Drawe
           </a>
         </div>
 
-        <div className="px-8 pt-3 pb-8">
+        <div className="pr-6 pt-3 pb-8">
 
           {/* Menu Items */}
           <nav className="space-y-0">
@@ -62,7 +64,7 @@ const DrawerNavigation = ({ isOpen, onClose, onMouseEnter, onMouseLeave }: Drawe
               <a
                 key={index}
                 href={item.href}
-                className="block py-2 px-4 text-gray-800 hover:text-white transition-all duration-200 rounded-lg hover:bg-green-500 text-right"
+                className="block py-2 text-gray-800 hover:text-white transition-all duration-200 rounded-lg hover:bg-green-500 text-right"
                 style={{fontFamily: 'Montserrat, sans-serif', fontWeight: 400}}
                 onClick={() => {
                   onMouseEnter(); // Reset timer on click

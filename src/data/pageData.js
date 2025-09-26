@@ -77,41 +77,46 @@ export const pageTemplates = {
 export const servicesPageData = {
   hero: {
     title: "Our Zoho Services: Consulting, Implementation & Integration",
-    subtitle: "Transform your business operations with expert Zoho solutions tailored to your unique needs.",
-    description: "From strategic planning to full implementation, we deliver Zoho solutions that drive real business outcomes.",
+    subtitle: "",
+    description: "",
     ctaText: "Get Started Today",
     backgroundImage: "/images/Web-Development-Hero.jpg"
   },
   article: {
     sections: [
       {
+        heading: "Practical Zoho solutions, built to fit your business and scale with your team.",
+        content: "From first-time CRM setups to full ERP integrations, our services cover the core Zoho projects that drive adoption, automation, and growth. We help businesses implement Zoho the right way — fast, focused, and built to last. Every project starts with your process, not just the software. Explore our core services below.",
+        type: "text"
+      },
+      {
         heading: "Zoho Consulting",
-        content: "Strategic planning and roadmaps to optimize your Zoho implementation. Our consulting approach goes beyond software setup—we analyze your current processes, identify optimization opportunities, and create a comprehensive roadmap for Zoho adoption that aligns with your business goals. Whether you're starting fresh or looking to maximize existing investments, our consultants provide the strategic insight needed for success.",
+        content: "Not sure where to start? Our consulting sessions map your sales, service, and finance workflows against Zoho's ecosystem. You'll get a clear plan for what to implement, what to ignore, and how to phase your rollout.\nLearn More",
         type: "text"
       },
       {
         heading: "Zoho Implementation",
-        content: "Complete setup and configuration services for seamless Zoho deployment. Our implementation methodology ensures your Zoho environment is configured to match your unique business processes. We handle everything from initial setup and data migration to user training and testing, ensuring your team is ready to hit the ground running from day one.",
+        content: "We don't just \"set up\" Zoho — we implement it with your real business in mind. From CRM to automation, we configure the tools, migrate your data, and train your team so adoption sticks.\nLearn More",
         type: "text"
       },
       {
         heading: "CRM & ERP Integration",
-        content: "Seamless connectivity between Zoho and your existing business systems. Break down data silos and create a unified business ecosystem. Our integration expertise spans financial systems, marketing platforms, e-commerce solutions, and custom applications, ensuring data flows seamlessly across your entire technology stack.",
+        content: "Your CRM shouldn't live in a silo. We connect Zoho to finance, operations, and third-party systems so data flows seamlessly. No more double entry, no more broken reports.\nLearn More",
         type: "text"
       },
       {
-        heading: "Zoho Apps Focus",
-        content: "Strategic selection and implementation of the right Zoho applications for your business. With over 45 Zoho applications available, choosing the right combination can be overwhelming. We focus on the core applications that deliver maximum ROI: Zoho CRM, Creator, Books, Desk, and Analytics, ensuring you get the functionality you need without the complexity you don't.",
+        heading: "Zoho Apps We Implement",
+        content: "Zoho offers dozens of apps — but you don't need them all. We focus on the handful that deliver results: CRM, Creator, Bigin, Desk, Finance, and Analytics. Everything you need, nothing you don't.\nLearn More",
         type: "text"
       },
       {
-        heading: "Service Packages",
-        content: "Flexible engagement models designed to meet your specific needs and budget. Choose from our structured service packages that combine consulting, implementation, and ongoing support, or work with us on custom projects tailored to your unique requirements. All packages include comprehensive training and documentation.",
+        heading: "Packages",
+        content: "Want a simple way to engage us? Our subscription packages give you predictable pricing and ongoing support. Choose Starter, Growth, or Enterprise based on your needs — each includes implementation, training, and updates.\nLearn More",
         type: "text"
       },
       {
-        heading: "Why Choose Enable?",
-        content: "Experience the Enable difference: strategic focus, proven methodology, and measurable results. Unlike other Zoho partners who simply resell software, we deliver business outcomes. Our team combines deep Zoho expertise with real-world business experience, ensuring your implementation drives actual business value—not just software adoption.",
+        heading: "Why Enable?",
+        content: "Most partners just resell Zoho. We deliver outcomes: cleaner pipelines, faster reporting, and systems your team actually uses. That's the difference.\nLearn More",
         type: "text"
       },
       {
@@ -119,33 +124,28 @@ export const servicesPageData = {
         content: `
           <div class="space-y-6">
             <div class="border-l-4 border-blue-500 pl-4">
-              <h4 class="font-semibold text-lg mb-2">What is the typical timeline for a Zoho implementation?</h4>
-              <p class="text-gray-700">Implementation timelines vary based on complexity, but most projects range from 4-12 weeks. Simple CRM setups can be completed in 2-4 weeks, while complex ERP implementations may take 3-6 months. We provide detailed timelines during the consultation phase.</p>
+              <h4 class="font-semibold text-lg mb-2">Q: What services does Enable provide?</h4>
+              <p class="text-gray-700">A: We focus on Zoho consulting, implementation, CRM/ERP integration, and subscription packages. Each service is designed to streamline operations and improve adoption.</p>
             </div>
 
             <div class="border-l-4 border-blue-500 pl-4">
-              <h4 class="font-semibold text-lg mb-2">Do you provide training for our team?</h4>
-              <p class="text-gray-700">Yes, comprehensive training is included in all our implementation packages. We provide role-based training sessions, documentation, and ongoing support to ensure successful user adoption across your organization.</p>
+              <h4 class="font-semibold text-lg mb-2">Q: How do I know which service is right for me?</h4>
+              <p class="text-gray-700">A: Most clients start with consulting to define a roadmap, then move into implementation. If you already have Zoho in place, integration or packages may be the better entry point.</p>
             </div>
 
             <div class="border-l-4 border-blue-500 pl-4">
-              <h4 class="font-semibold text-lg mb-2">Can you integrate Zoho with our existing systems?</h4>
-              <p class="text-gray-700">Absolutely. We specialize in creating seamless integrations between Zoho and your existing business systems, including accounting software, marketing platforms, e-commerce solutions, and custom applications.</p>
+              <h4 class="font-semibold text-lg mb-2">Q: Can I combine multiple services?</h4>
+              <p class="text-gray-700">A: Yes. Services are modular but designed to work together. Many clients blend consulting + implementation, then add integration and packages as their system matures.</p>
             </div>
 
             <div class="border-l-4 border-blue-500 pl-4">
-              <h4 class="font-semibold text-lg mb-2">What ongoing support do you provide?</h4>
-              <p class="text-gray-700">We offer flexible support options including monthly retainer packages, per-incident support, and comprehensive managed services. Our goal is to ensure your Zoho investment continues to deliver value as your business grows.</p>
+              <h4 class="font-semibold text-lg mb-2">Q: Do you offer fixed pricing?</h4>
+              <p class="text-gray-700">A: Yes. Our subscription packages give predictable monthly pricing with clear deliverables, while standalone services can be scoped project by project.</p>
             </div>
 
             <div class="border-l-4 border-blue-500 pl-4">
-              <h4 class="font-semibold text-lg mb-2">How do you ensure data security during migration?</h4>
-              <p class="text-gray-700">Data security is our top priority. We follow enterprise-grade security protocols, including encrypted data transfer, secure staging environments, and comprehensive backup procedures throughout the migration process.</p>
-            </div>
-
-            <div class="border-l-4 border-blue-500 pl-4">
-              <h4 class="font-semibold text-lg mb-2">What makes Enable different from other Zoho partners?</h4>
-              <p class="text-gray-700">Our focus on business outcomes over software features sets us apart. We combine strategic consulting with technical expertise, ensuring your Zoho implementation drives measurable business results, not just technology adoption.</p>
+              <h4 class="font-semibold text-lg mb-2">Q: What makes Enable different from other Zoho partners?</h4>
+              <p class="text-gray-700">A: We don't resell every Zoho app. We focus on the ones that deliver real outcomes, and we implement them with your business process in mind — not just the software.</p>
             </div>
           </div>
         `,
@@ -588,7 +588,7 @@ export const zohoAppsPageData = {
     subtitle: "Configure and customize Zoho applications to solve your specific business problems",
     description: "We focus on the core Zoho apps that deliver real business value, with expert configuration, customization, and ongoing support.",
     ctaText: "See Our App Expertise",
-    backgroundImage: "/images/zoho-apps-hero.jpg"
+    backgroundImage: "/images/zoho-apps.jpg"
   },
   article: {
     sections: [
