@@ -1,14 +1,24 @@
 import { useState, useRef, useEffect } from 'react';
 import DrawerNavigation from './DrawerNavigation';
+import ZohoAppsDrawer from './ZohoAppsDrawer';
 
 const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isZohoDrawerOpen, setIsZohoDrawerOpen] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const zohoTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   const clearTimer = () => {
     if (timerRef.current) {
       clearTimeout(timerRef.current);
       timerRef.current = null;
+    }
+  };
+
+  const clearZohoTimer = () => {
+    if (zohoTimerRef.current) {
+      clearTimeout(zohoTimerRef.current);
+      zohoTimerRef.current = null;
     }
   };
 
@@ -20,15 +30,39 @@ const Header = () => {
     }, 4000);
   };
 
+  const startZohoAutoCloseTimer = () => {
+    clearZohoTimer(); // Clear any existing timer
+    zohoTimerRef.current = setTimeout(() => {
+      setIsZohoDrawerOpen(false);
+      zohoTimerRef.current = null;
+    }, 4000);
+  };
+
   const handleServicesClick = () => {
     if (isDrawerOpen) {
       // If already open, close it
       setIsDrawerOpen(false);
       clearTimer();
     } else {
-      // Open drawer and start 5-second timer
+      // Close Zoho drawer if open, then open Services drawer
+      setIsZohoDrawerOpen(false);
+      clearZohoTimer();
       setIsDrawerOpen(true);
       startAutoCloseTimer();
+    }
+  };
+
+  const handleZohoClick = () => {
+    if (isZohoDrawerOpen) {
+      // If already open, close it
+      setIsZohoDrawerOpen(false);
+      clearZohoTimer();
+    } else {
+      // Close Services drawer if open, then open Zoho drawer
+      setIsDrawerOpen(false);
+      clearTimer();
+      setIsZohoDrawerOpen(true);
+      startZohoAutoCloseTimer();
     }
   };
 
@@ -39,15 +73,28 @@ const Header = () => {
     }
   };
 
+  const handleZohoDrawerInteraction = () => {
+    // Reset timer when user interacts with Zoho drawer
+    if (isZohoDrawerOpen) {
+      startZohoAutoCloseTimer();
+    }
+  };
+
   const handleCloseDrawer = () => {
     setIsDrawerOpen(false);
     clearTimer();
   };
 
-  // Cleanup timer on unmount
+  const handleCloseZohoDrawer = () => {
+    setIsZohoDrawerOpen(false);
+    clearZohoTimer();
+  };
+
+  // Cleanup timers on unmount
   useEffect(() => {
     return () => {
       clearTimer();
+      clearZohoTimer();
     };
   }, []);
 
@@ -79,9 +126,14 @@ const Header = () => {
               <a href="#packages" className="text-gray-700 hover:text-enable-blue transition-colors">
                 Packages
               </a>
-              <a href="#zoho" className="text-gray-700 hover:text-enable-blue transition-colors">
-                Zoho
-              </a>
+              <div className="relative">
+                <button
+                  onClick={handleZohoClick}
+                  className="text-gray-700 hover:text-enable-blue transition-colors cursor-pointer"
+                >
+                  Zoho Apps
+                </button>
+              </div>
               <a href="#pricing" className="text-gray-700 hover:text-enable-blue transition-colors">
                 Pricing
               </a>
@@ -107,6 +159,13 @@ const Header = () => {
         isOpen={isDrawerOpen}
         onClose={handleCloseDrawer}
         onMouseEnter={handleDrawerInteraction}
+        onMouseLeave={() => {}}
+      />
+
+      <ZohoAppsDrawer
+        isOpen={isZohoDrawerOpen}
+        onClose={handleCloseZohoDrawer}
+        onMouseEnter={handleZohoDrawerInteraction}
         onMouseLeave={() => {}}
       />
     </>
